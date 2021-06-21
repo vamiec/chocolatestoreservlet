@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sample</groupId>
-    <artifactId>LiquorStoreApp</artifactId>
+    <artifactId>liquorstoreapp</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -21,16 +21,32 @@
 <properties>
      <maven.compiler.source>1.8</maven.compiler.source>
      <maven.compiler.target>1.8</maven.compiler.target>
+   <docker.image.prefix>liquoregistry.azurecr.io</docker.image.prefix>
+   <java.version>1.8</java.version>
+   <jib-maven-plugin.version>2.2.0</jib-maven-plugin.version>
 </properties>
          
     <build>
-        <finalName>SampleServlet</finalName>
+        <finalName>sampleservlet</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
             </plugin>
+            <plugin>
+  <artifactId>jib-maven-plugin</artifactId>
+  <groupId>com.google.cloud.tools</groupId>
+  <version>${jib-maven-plugin.version}</version>
+  <configuration>
+     <from>
+         <image>mcr.microsoft.com/java/jdk:8-zulu-alpine</image>
+     </from>
+     <to>
+         <image>${docker.image.prefix}/sampleservlet</image>
+     </to>
+  </configuration>
+</plugin>
         </plugins>
     </build>
 </project>
