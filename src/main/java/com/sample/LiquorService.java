@@ -14,16 +14,19 @@ public class LiquorService {
 
         List brands = new ArrayList();
 
-        if(type.equals(LiquorType.WINE)){
-            brands.add("Adrianna Vineyard");
-            brands.add(("J. P. Chenet"));
+        if(type.equals(LiquorType.DarkChocolate)){
+            brands.add("Lindt Excellence");
+            brands.add("Amul");
+            brands.add("Cadbury Bournville");
 
-        }else if(type.equals(LiquorType.WHISKY)){
-            brands.add("Glenfiddich");
-            brands.add("Johnnie Walker");
+        }else if(type.equals(LiquorType.MilkChocolate)){
+            brands.add("Hershey's");
+            brands.add("Cadbury Dairy Milk");
+            brands.add("Dove Silky Promises");
 
-        }else if(type.equals(LiquorType.BEER)){
-            brands.add("Corona");
+        }else if(type.equals(LiquorType.WhiteChocolate)){
+            brands.add("Nestle");
+            brands.add("Mars");
 
         }else {
             brands.add("No Brand Available");
